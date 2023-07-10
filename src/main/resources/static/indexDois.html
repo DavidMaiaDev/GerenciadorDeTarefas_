@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="Css/styles.css" rel="stylesheet">
+    <script src="index.js"></script>
+    <title>Tarefas</title>
+</head>
+<body>
+<h1>Tarefas</h1>
+
+<form id="searchForm" onsubmit="event.preventDefault();">
+    <label for="id">ID da Tarefa:</label>
+    <input type="text" id="id" name="id" required>
+
+    <label for="titulo">Titulo:</label>
+    <input type="text" id="titulo" name="titulo" required>
+
+    <label for="responsavel">Responsável:</label>
+    <input type="text" id="responsavel" name="responsavel" required>
+
+    <label for="status">Status:</label>
+    <select id="status" name="status">
+        <option value="">Selecione...</option>
+        <option value="false">Em andamento</option>
+        <option value="true">Concluída</option>
+    </select>
+    <ul id="resultList"></ul>
+    <div class="button-container">
+        <input id="buscar" onclick="buscarTarefa()" type="submit" value="Consultar">
+        <br>
+        <a id="retornaCadastro" href="indexUm.html">Retornar Cadastro</a>
+    </div>
+</form>
+</body>
+<br>
+<div id="resultado" class="result-box" style="display: none;"></div>
+
+</html>
